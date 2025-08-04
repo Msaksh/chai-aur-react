@@ -11,8 +11,8 @@ function App() {
     <>
 
       <Routes>
-        <Route path="/chai-aur-react" element={<Home />} />
-        <Route path="/chai-aur-react/bgchanger" element={<BgChanger />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/bgchanger" element={<BgChanger />} />
         {/* Add more routes as needed */}
       </Routes>
 
