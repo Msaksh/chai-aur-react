@@ -1,35 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
+import { Routes, Route, Link } from 'react-router-dom';
+import BgChanger from './pages/bgChanger/bgChanger';
+import Home from './pages/Home/Home';
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  const addValues = () => {
-    setCount(count + 1)
-  }
-  const removeValues = () => {
-    if(count > 0){
-
-      setCount(count - 1)
-    }
-  }
 
   return (
     <>
-      <h1>Count is : {count}</h1>
-      <div className="card">
-        <button onClick={addValues}>
-          add count
-        </button>
-        <br />
-        <button onClick={removeValues}>
-          remove count
-        </button>
-       
-      </div>
-      
+
+      <Routes>
+        <Route path="/chai-aur-react" element={<Home />} />
+        <Route path="/chai-aur-react/bgchanger" element={<BgChanger />} />
+        {/* Add more routes as needed */}
+      </Routes>
+
     </>
   )
 }
